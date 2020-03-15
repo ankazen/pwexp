@@ -8,9 +8,7 @@
 '''
 =>
 
-'''
 SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS "t1" WHERE ("t1"."id" = 1)
-'''
 
 ## join
 '''
@@ -22,9 +20,7 @@ SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS
 
 =>
 
-'''
 SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS "t1" INNER JOIN "person" AS "t2" ON ("t1"."owner_id" = "t2"."id") WHERE ("t2"."id" > 1)
-'''
 
 ## parameter
 '''
@@ -36,9 +32,7 @@ SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS
     qs = filter_exp(qs, exp, context)
 '''
 =>
-'''
 SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS "t1" INNER JOIN "person" AS "t2" ON ("t1"."owner_id" = "t2"."id") WHERE ("t2"."id" = 1)
-'''
 
 ## muti
 '''
@@ -53,9 +47,7 @@ SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS
 
 =>
 
-'''
 SELECT "t1"."id", "t1"."owner_id", "t1"."name", "t1"."animal_type" FROM "pet" AS "t1" INNER JOIN "person" AS "t2" ON ("t1"."owner_id" = "t2"."id") WHERE (("t2"."id" > 1) AND ("t1"."id" = 2))
-'''
 
 
 # filter_rule
